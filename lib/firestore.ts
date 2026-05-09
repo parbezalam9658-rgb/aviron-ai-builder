@@ -34,3 +34,29 @@ export function subscribeUserProfile(
 export async function upsertUserProfile(user: UserProfile) {
   return true;
 }
+
+export async function saveProject(project: any) {
+  return true;
+}
+
+export async function updateProject(project: any) {
+  return true;
+}
+
+export async function deleteProject(id: string) {
+  return true;
+}
+
+export async function setUserPlan(
+  uid: string,
+  plan: string
+) {
+  return true;
+}
+
+export async function setUserRole(
+  uid: string,
+  role: string
+) {
+  return true;
+}
