@@ -2,6 +2,8 @@ export type UserProfile = {
   uid: string;
   email?: string;
   displayName?: string;
+  plan?: string;
+  role?: string;
 };
 
 export type CloudProject = {
@@ -26,6 +28,8 @@ export function subscribeUserProfile(
     uid,
     email: "demo@example.com",
     displayName: "Parbez Alam",
+    plan: "pro",
+    role: "admin",
   });
 
   return () => {};
