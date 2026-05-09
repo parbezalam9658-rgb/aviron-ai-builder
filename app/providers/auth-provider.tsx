@@ -11,6 +11,7 @@ export function useAuth() {
     isAdmin: false,
     isPro: false,
     isProPlus: false,
+    logout: async () => {},
   };
 }
 
