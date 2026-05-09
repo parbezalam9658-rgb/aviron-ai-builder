@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "./providers/auth-provider";
+import AuthProvider from "./providers/auth-provider";
 import PwaRegister from "./components/pwa-register";
 
 const geistSans = Geist({

@@ -3,7 +3,9 @@
 import React from "react";
 
 type AuthType = {
-  user: null;
+  user: {
+    uid: string;
+  };
   authLoading: boolean;
   role: string;
   plan: string;
@@ -15,7 +17,7 @@ type AuthType = {
 
 export function useAuth(): AuthType {
   return {
-    user: null,
+    user: { uid: "demo-user" },
     authLoading: false,
     role: "user",
     plan: "free",
