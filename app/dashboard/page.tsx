@@ -9,7 +9,7 @@ import { CloudProject, UserProfile, deleteProject, subscribeProjects, subscribeU
 
 export default function DashboardPage() {
   const router = useRouter();
-  const { user, authLoading, logout, role } = useAuth();
+  const { user, authLoading, logout, role } = useAuth() as any;
   const [loggingOut, setLoggingOut] = useState(false);
   const [projects, setProjects] = useState<CloudProject[]>([]);
   const [profile, setProfile] = useState<UserProfile | null>(null);
