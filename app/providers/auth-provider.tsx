@@ -5,7 +5,7 @@ import React from "react";
 export function useAuth() {
   return {
     user: null,
-    loading: false,
+    authLoading: false,
     role: "user",
     plan: "free",
     isAdmin: false,
