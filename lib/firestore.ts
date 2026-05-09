@@ -18,6 +18,7 @@ export function subscribeProjects(
   callback: (rows: CloudProject[]) => void
 ) {
   callback([]);
+
   return () => {};
 }
 
@@ -36,19 +37,30 @@ export function subscribeUserProfile(
   return () => {};
 }
 
-export async function upsertUserProfile(user: UserProfile) {
+export async function upsertUserProfile(
+  user: UserProfile
+) {
   return true;
 }
 
-export async function saveProject(project: any) {
+export async function saveProject(
+  project: any
+) {
   return true;
 }
 
-export async function updateProject(project: any) {
+export async function updateProject(
+  uid: string,
+  projectId: string,
+  data: any
+) {
   return true;
 }
 
-export async function deleteProject(id: string) {
+export async function deleteProject(
+  uid: string,
+  projectId: string
+) {
   return true;
 }
 
