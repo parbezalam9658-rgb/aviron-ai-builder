@@ -13,6 +13,8 @@ type AuthType = {
   isPro: boolean;
   isProPlus: boolean;
   logout: () => Promise<void>;
+  loginWithEmail: () => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
 };
 
 export function useAuth(): AuthType {
@@ -25,6 +27,8 @@ export function useAuth(): AuthType {
     isPro: false,
     isProPlus: false,
     logout: async () => {},
+    loginWithEmail: async () => {},
+    loginWithGoogle: async () => {},
   };
 }
 
