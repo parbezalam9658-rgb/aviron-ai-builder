@@ -1,1 +1,2 @@
-export {};
+export const auth = {};
+export const db = {};
