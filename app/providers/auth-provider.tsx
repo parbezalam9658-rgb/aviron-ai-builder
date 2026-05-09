@@ -24,6 +24,11 @@ type AuthType = {
     password: string
   ) => Promise<void>;
 
+  signupWithEmail: (
+    email: string,
+    password: string
+  ) => Promise<void>;
+
   loginWithGoogle: () => Promise<void>;
 };
 
@@ -47,6 +52,11 @@ export function useAuth(): AuthType {
     logout: async () => {},
 
     loginWithEmail: async (
+      email: string,
+      password: string
+    ) => {},
+
+    signupWithEmail: async (
       email: string,
       password: string
     ) => {},
