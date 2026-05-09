@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import type { Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import AuthProvider from "./providers/auth-provider";
 import PwaRegister from "./components/pwa-register";
 
@@ -17,21 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Aviron AI Builder",
-  description: "Premium AI website generation platform",
-  manifest: "/manifest.webmanifest",
-  icons: {
-    icon: "/icons/aviron-icon.svg",
-    apple: "/icons/aviron-icon.svg",
-  },
-  appleWebApp: {
-    capable: true,
-    title: "Aviron AI",
-    statusBarStyle: "black-translucent",
-  },
-};
-
-export const viewport: Viewport = {
-  themeColor: "#0b0b12",
+  description: "Private AI Agency Platform",
 };
 
 export default function RootLayout({
@@ -40,13 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <AuthProvider>{children}</AuthProvider>
-        <PwaRegister />
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+      >
+        <AuthProvider>
+          {children}
+          <PwaRegister />
+        </AuthProvider>
       </body>
     </html>
   );
