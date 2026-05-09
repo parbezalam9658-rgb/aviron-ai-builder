@@ -9,6 +9,7 @@ export type UserProfile = {
 export type CloudProject = {
   id: string;
   title: string;
+  prompt?: string;
   createdAt: string;
 };
 
