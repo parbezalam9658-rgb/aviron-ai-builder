@@ -2,7 +2,18 @@
 
 import React from "react";
 
-export function useAuth() {
+type AuthType = {
+  user: null;
+  authLoading: boolean;
+  role: string;
+  plan: string;
+  isAdmin: boolean;
+  isPro: boolean;
+  isProPlus: boolean;
+  logout: () => Promise<void>;
+};
+
+export function useAuth(): AuthType {
   return {
     user: null,
     authLoading: false,
